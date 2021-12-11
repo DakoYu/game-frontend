@@ -1,0 +1,7 @@
+.all-games {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1980px;
+}

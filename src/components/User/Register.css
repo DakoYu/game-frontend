@@ -1,0 +1,41 @@
+.register {
+    display: flex;
+    justify-content: center;
+    padding: 12%;
+    width: 512px;
+    margin: auto;
+}
+
+.register form {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 12px;
+    padding: 64px;
+    align-items: center;
+}
+
+.register form input {
+    padding: 12px;
+    width: 276px;
+    border: 1px solid #d4d4d3;
+    border-radius: 12px;
+    outline-width: thin;
+    outline-color: #ffd699;
+    font-size: 1.1rem;
+    margin: 0 0 20px;
+}
+
+.register form button {
+    padding: 12px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #f198b3;
+    color: #fff;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.register form button:hover {
+    background-color: #ec7699;
+}

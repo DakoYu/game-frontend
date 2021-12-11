@@ -1,0 +1,14 @@
+.alert {
+    text-align: center;
+    margin: 0 0 10%;
+    padding: 12px;
+    font-size: 1.2rem;
+}
+
+.alert.alert-fail {
+    color: #960018;
+}
+
+.alert.alert-success {
+    color: #80c904;
+}

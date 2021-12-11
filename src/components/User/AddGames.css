@@ -1,0 +1,33 @@
+.add-game {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 512px;
+}
+
+.add-game input {
+    padding: 12px;
+    border: 1px solid #d4d4d3;
+    border-radius: 12px;
+    outline-width: thin;
+    outline-color: #4169E1;
+    font-size: 1.1rem;
+    margin: 0 0 20px;
+}
+
+.add-game .photo {
+    border: none;
+}
+
+.add-game button {
+    outline: none;
+    border: none;
+    background-color: #4169E1;
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 12px;
+    width: 100%;
+    margin: 10% 0 10%;
+    text-transform: uppercase;
+    border-radius: 12px;
+}

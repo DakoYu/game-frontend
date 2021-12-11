@@ -1,0 +1,7 @@
+.mygames {
+    display: flex;
+    padding: 20px;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+}

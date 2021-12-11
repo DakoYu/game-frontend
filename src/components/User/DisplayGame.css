@@ -1,0 +1,56 @@
+.game-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #212121;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    width: 100%;
+    margin: 0 0 5%;
+}
+
+.game-item img {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.game-item h3 {
+    color: #fff;
+}
+
+.game-item p {
+    color: #fff;
+}
+
+.game-item button {
+    border: none;
+    background-color: #212121;
+    color: #960018;
+    font-size: 2rem;
+    margin: 0 1% 5%;
+}
+
+.choice {
+    display: flex;
+    justify-content: center;
+}
+
+.choice button {
+    padding: 12px;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin: 3%;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.choice .yes {
+    background-color: #C70000;
+}
+
+.choice .no {
+    background-color: #3CB043;
+}

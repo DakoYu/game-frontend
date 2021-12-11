@@ -1,0 +1,28 @@
+.games-db {
+    display: flex;
+    background-color: #212121;
+    color: #fff;
+    width: 40%;
+    padding: 10px;
+    margin: 0 0 20px;
+}
+
+.games-db img {
+    width: 320px;
+    height: 160px;
+    object-fit: cover;
+}
+
+.games-db .games-info {
+    margin-left: 5%;
+}
+
+.games-db .games-info button {
+    padding: 6px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background-color: #960018;
+    color: #fff;
+    cursor: pointer;
+}
