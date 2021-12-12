@@ -30,7 +30,7 @@ const PublicGames = () => {
 
     if (loading) return <ReactLoading className='loading' type={'bars'} color={'#4169E1'} height={300} width={300} />
 
-    const gameList = games.map(e => {
+    const gameList = games && games.map(e => {
         return <GameCard
             key={e._id}
             name={e.name}
