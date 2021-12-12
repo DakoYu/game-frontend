@@ -17,7 +17,7 @@ const Navbar = () => {
     const logoutHandler = () => {
         logout();
         navigate('/');
-        window.location.reload(true);
+        window.location.reload(false);
     }
 
     const userHandler = async () => {

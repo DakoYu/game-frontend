@@ -32,7 +32,7 @@ const Login = () => {
 
             authenticate(res, () => {
                 navigate('/');
-                window.location.reload(true);
+                window.location.reload(false);
             });
 
         } catch(err) {
