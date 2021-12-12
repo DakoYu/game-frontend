@@ -9,6 +9,7 @@ const Navbar = () => {
     const [state, setState] = useState({
         name: '',
         img: '',
+        loading: true
     });
 
     const navigate = useNavigate();
@@ -34,6 +35,7 @@ const Navbar = () => {
                 return {
                     name: res.data.user.name, 
                     img: res.data.user._id, 
+                    loading: false
                 }
             });
 
@@ -57,7 +59,7 @@ const Navbar = () => {
                     {isAuth() && <Link className='nav-link' to='/profile'>Profile</Link>}
                     {isAuth() && <li className='nav-link' onClick={logoutHandler}>Log Out</li>}
                 </ul>
-                {isAuth() &&
+                {!state.loading &&
                     <div className='info'>
                         <img src={`${process.env.REACT_APP_API}user/image/${state.img}`} alt='avatar'/>
                         <p>{state.name}</p>
