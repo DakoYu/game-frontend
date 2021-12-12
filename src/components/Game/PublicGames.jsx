@@ -14,29 +14,30 @@ const PublicGames = () => {
         try {
             const url = `${process.env.REACT_APP_API}game/`;
             const res = await axios.get(url);
-
+            
             setGames(res.data.games);
-
+            
             setLoading(false);
             
         } catch (err) {
-
+            
         }
     }
-
-    useEffect(() => {
-        gameHandler();
-    }, []);
-
-    if (loading) return <ReactLoading className='loading' type={'bars'} color={'#4169E1'} height={300} width={300} />
-
-    const gameList = games && games.map(e => {
+    
+    const gameList = games.map(e => {
         return <GameCard
             key={e._id}
             name={e.name}
             id={e._id}
         />
     });
+    
+    useEffect(() => {
+        gameHandler();
+    }, []);
+
+    if (loading) return <ReactLoading className='loading' type={'bars'} color={'#4169E1'} height={300} width={300} />
+
 
     return (
         <>
