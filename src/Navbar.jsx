@@ -42,7 +42,7 @@ const Navbar = () => {
     }
 
     useEffect(() => {
-        userHandler();
+        isAuth() && userHandler();
     }, [])
 
     return (
