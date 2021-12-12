@@ -32,8 +32,9 @@ const Login = () => {
 
             authenticate(res, () => {
                 navigate('/');
+                window.location.reload(true);
             });
-            
+
         } catch(err) {
             setState(prev => {
                 return {...prev, error: err.response.data.message}
