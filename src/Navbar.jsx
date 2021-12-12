@@ -9,7 +9,7 @@ const Navbar = () => {
     const [state, setState] = useState({
         name: '',
         img: '',
-    })
+    });
 
     const navigate = useNavigate();
 
@@ -35,9 +35,10 @@ const Navbar = () => {
                     name: res.data.user.name, 
                     img: res.data.user._id, 
                 }
-            })
+            });
+
         } catch (err) {
-            console.log(err);
+            console.log(err.response.data.message);
         }
     }
 
