@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import ReactLoading from 'react-loading';
 import MaterialTable from 'material-table';
-import tableIcons from './tableIcons';
 import { getCookie } from '../../utils/authHelper';
 
 import './AllUsers.css';
@@ -54,7 +53,7 @@ const AllUsers = () => {
     return (
         <div>
             <MaterialTable 
-                icons={tableIcons}
+                // icons={tableIcons}
                 columns={columns}
                 data={users}
                 title='Users'
