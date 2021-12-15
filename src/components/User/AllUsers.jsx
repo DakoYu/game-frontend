@@ -1,14 +1,28 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import ReactLoading from 'react-loading';
+import MaterialTable from 'material-table';
+import tableIcons from './tableIcons';
 import { getCookie } from '../../utils/authHelper';
-import User from './User';
+
 import './AllUsers.css';
 
 const AllUsers = () => {
     const [users, setUsers] = useState([]);
 
     const [loading, setLoading] = useState(true);
+
+    const columns = [
+        { 
+            title: 'Avatar', 
+            field: '_id' ,
+            render: rowData => <img src={`${process.env.REACT_APP_API}user/image/${rowData._id}`} style={{width: 50, borderRadius: '50%'}} alt='avatar'/>
+        },
+        { title: 'Name', field: 'name' },
+        { title: 'Email', field: 'email' },
+        { title: 'Roles', field: 'roles' },
+    ]
+
 
     const getAllUsers = async() => {
         try {
@@ -21,7 +35,8 @@ const AllUsers = () => {
                         authorization: `Bearer ${token}`
                 }
             });
-            
+
+            console.log(res.data.user)
             setUsers(res.data.user);
 
             setLoading(false);
@@ -36,27 +51,14 @@ const AllUsers = () => {
 
     if (loading) return <ReactLoading className='loading' type={'bars'} color={'#4169E1'} height={300} width={300} />
 
-    const usersList = users.map(e => {
-        return <User 
-            key={e._id}
-            id={e._id}
-            name={e.name}
-            email={e.email}
-            roles={e.roles}
-        />
-    })
-
     return (
         <div>
-            <h3>Users</h3>
-            <div className='users'>
-                <div className='header'>
-                    <h4>Name</h4>
-                    <h4>Email</h4>
-                    <h4>Roles</h4>
-                </div>
-                {usersList}
-            </div>
+            <MaterialTable 
+                icons={tableIcons}
+                columns={columns}
+                data={users}
+                title='Users'
+            />
         </div>
     )
 }
