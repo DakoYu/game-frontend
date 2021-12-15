@@ -52,12 +52,12 @@ const AllUsers = () => {
 
     return (
         <div>
-            <MaterialTable 
+            {/* <MaterialTable 
                 // icons={tableIcons}
                 columns={columns}
                 data={users}
                 title='Users'
-            />
+            /> */}
         </div>
     )
 }
