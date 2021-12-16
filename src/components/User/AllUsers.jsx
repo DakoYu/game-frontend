@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import ReactLoading from 'react-loading';
+import User from './User';
 import { getCookie } from '../../utils/authHelper';
 
 import './AllUsers.css';
@@ -35,11 +36,20 @@ const AllUsers = () => {
         getAllUsers();
     }, []);
 
+    
     if (loading) return <ReactLoading className='loading' type={'bars'} color={'#4169E1'} height={300} width={300} />
-
+    
+    const userList = users.map(e => {
+        <User 
+            id={e._id}
+            name={e.name}
+            email={e.email} 
+            roles={e.roles}
+        />
+    })
     return (
         <div>
-
+            {userList}
         </div>
     )
 }
