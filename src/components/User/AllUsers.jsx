@@ -23,7 +23,6 @@ const AllUsers = () => {
                 }
             });
 
-            console.log(res.data.user)
             setUsers(res.data.user);
 
             setLoading(false);
@@ -40,7 +39,7 @@ const AllUsers = () => {
     if (loading) return <ReactLoading className='loading' type={'bars'} color={'#4169E1'} height={300} width={300} />
     
     const userList = users.map(e => {
-        <User 
+        return <User 
             id={e._id}
             name={e.name}
             email={e.email} 
